@@ -58,6 +58,7 @@ expected_custom_color_format = [(0,'Cyan','Black'),
                                 (0,'Magenta','White'),]
 assert(result == 4)
 
-result = print_color_map()
-assert(result == 25)
-print("All is well (maybe!)\n")
+assert color_map == expected_color_map, "Color map does not match expected values"
+display_color_map(color_map)
+assert len(color_map) == 25, "Color map length is incorrect"
+print("All checks passed successfully!\n")
