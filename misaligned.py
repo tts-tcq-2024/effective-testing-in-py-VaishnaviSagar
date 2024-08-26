@@ -59,6 +59,5 @@ expected_custom_color_format = [(0,'Cyan','Black'),
 assert(result == 4)
 
 assert major_colors== expected_color_format, "Color map does not match expected values"
-display_color_map(color_map)
 assert len(major_colors) == 25, "Color map length is incorrect"
 print("All checks passed successfully!\n")
