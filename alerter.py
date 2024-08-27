@@ -13,7 +13,7 @@ def network_alert_stub(celcius):
 def alert_in_celcius(farenheit):
     celcius = (farenheit - 32) * 5 / 9
     returnCode = network_alert_stub(celcius)
-     global alert_failure_count
+    global alert_failure_count
     if returnCode != 200:
         # non-ok response is not an error! Issues happen in life!
         # let us keep a count of failures to report
