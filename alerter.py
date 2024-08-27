@@ -29,3 +29,7 @@ alert_in_celcius(250.0)
 assert(network_alert_stub(204.2) == 500)
 print(f'{alert_failure_count} alerts failed.')
 print('All is well (maybe!)')
+# Additional check to validate expectations
+expected_failures = 3  # We expect 3 failures based on the above temperatures
+if alert_failure_count != expected_failures:
+    raise AssertionError(f'Expected {expected_failures} failures but got {alert_failure_count}')
